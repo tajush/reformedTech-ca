@@ -1,0 +1,13 @@
+
+.case-details {
+    padding: 70px 0px;
+    @include media("lg") {
+      padding: 90px 0px;
+    } 
+    p {
+        @include font(17px, 28.9px, 400);
+    }
+    // img {
+    //   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    // }   
+}

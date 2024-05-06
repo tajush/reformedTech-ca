@@ -1,0 +1,66 @@
+@import "abstracts/breakpoints";
+@import "abstracts/mixins";
+
+@import "animations";
+@import "base";
+@import "button";
+@import "global";
+
+@import "typography";
+@import "variables";
+@import "footer";
+@import "header";
+@import "mobileMenu";
+
+@import "home/heroSection";
+@import "home/ourClients";
+@import "home/ourService";
+@import "home/countDown";
+@import "home/clientReview";
+@import "home/clientQueries";
+@import "home/ourAchievement";
+
+@import "service/featureService";
+@import "service/clientSays";
+
+@import "about/aboutHeader";
+@import "about/aboutDescription";
+@import "about/aboutFeature";
+@import "about/businessAdvisory";
+@import "about/skilledPeople";
+@import "about/ourTeam";
+
+@import "contact/messageBox";
+@import "contact/addressBox";
+@import "contact/follow";
+
+@import "webDevelopment/digitalIdeas";
+
+@import "career/careerHeader";
+@import "career/workPlay";
+@import "career/perksWork";
+@import "career/popularJobs";
+
+@import "projects/featureProject";
+
+@import "404";
+@import "callToAction";
+@import "brandCarousel";
+
+@import "featureWorks";
+@import "headerPrimary";
+
+@import "blog";
+@import "offshore";
+@import "careerDetails/headerDetails";
+@import "careerDetails/detailsBody";
+@import "about/ourEvents";
+
+@import "casestudy";
+@import "commonpartner";
+@import "commonservices";
+@import "commonprocess";
+@import "businessGrowth";
+@import "termsofuse";
+@import "privacy";
+@import "casedetails";

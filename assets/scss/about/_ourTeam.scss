@@ -1,0 +1,100 @@
+@import "../variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+.our-team {
+  padding: 70px 0px;
+  @include media("lg") {
+    padding: 100px 0px;
+  }
+
+  & h3 {
+    @include font(20px, 30px, 600);
+    text-align: center;
+    margin-bottom: 30px;
+    @include media("lg") {
+      @include font(22px, 32px, 600);
+      text-align: left;
+    }
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+    @include media("lg") {
+      margin-bottom: 80px;
+    }
+
+    & h2 {
+      color: $color-black;
+      @include font(30px, 40px, 700);
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+      @include media("lg") {
+        max-width: 700px;
+        margin: 0 auto;
+        @include font(40px, 50px, 700);
+        padding-bottom: 20px;
+      }
+    }
+
+    & p {
+      color: $font-color-secondary;
+      @include font(15px, 25px, 400);
+      @include media("lg") {
+        max-width: 700px;
+        margin: 0 auto;
+        @include font(17px, 27px, 400);
+      }
+    }
+  }
+
+  &__body {
+    cursor: pointer;
+    &-content {
+      background-color: $bg-color-white;
+      box-shadow: 0px 8px 20px rgba(172, 172, 172, 0.25);
+      overflow: hidden;
+      border-radius: 6px;
+      @include media("lg") {
+
+      }
+
+      & img {
+        width: 100%;
+        transition: all 0.4s linear;
+        overflow: hidden;
+        &:hover {
+          transition: all 0.4s linear;
+          transform: scale(1.04);
+          
+        }
+      }
+
+      &-designation {
+        padding: 15px 10px;
+        height: 100%;
+        background-color: $color-white;
+        overflow: hidden;
+        @include media("lg") {
+        }
+
+        & h4 {
+          color: $color-black;
+          @include font(20px, 30px, 600);
+          margin-bottom: 5px;
+          @include media("lg") {
+            @include font(20px, 32px, 600);
+          }
+        }
+
+        & p {
+          color: $font-color-secondary;
+          @include font(14px, 14px, 400);
+          @include media("lg") {
+            @include font(14px, 14px, 400);
+          }
+        }
+      }
+    }
+  }
+}

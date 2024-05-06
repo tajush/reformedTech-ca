@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+  <head {{ HEAD_ATTRS }}>
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MQ55SQF");
+    </script>
+    <script type="application/ld+json">
+      [
+        {
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "name": "ReformedTech",
+          "url": "https://www.reformedtech.org",
+          "logo": "https://reformedtech.org/_nuxt/img/logo.2e45bce.png",
+          "sameAs": [
+            "https://facebook.com/reformedtech",
+            "https://twitter.com/reformedtech",
+            "https://www.linkedin.com/company/reformedtech",
+            "https://www.youtube.com/channel/UCM3Dm80vI52ZfrND3UbeCFg",
+            "http://pinterest.com/reformedtech",
+            "https://www.instagram.com/reformed_tech"
+          ]
+        }
+      ]
+    </script>
+    <meta property="og:image" content="https://reformedtech.org/logo-02.png" />
+    <meta property="og:image:secure_url" content="https://reformedtech.org/logo-02.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:alt" content="ReformedTech" />
+    {{ HEAD }}
+  </head>
+  <body {{ BODY_ATTRS }}>
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MQ55SQF"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      >
+      </iframe>
+    </noscript>
+    {{ APP }}
+  </body>
+</html>

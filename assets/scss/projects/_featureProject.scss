@@ -1,0 +1,82 @@
+@import "../variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+.featured-project {
+  padding: 70px 0px;
+  @include media("lg") {
+    padding: 100px 0px;
+  }
+
+  &__nav {
+    text-align: center;
+    margin-bottom: 30px;
+
+    &-item {
+      list-style-type: none;
+      background-color: $color-white;
+      box-shadow: 0px 4px 16px rgba(99, 99, 99, 0.1);
+      border-radius: 6px;
+      display: inline-block;
+
+      & li {
+        float: left;
+        padding: 12px 20px;
+        color: $font-color-secondary;
+        cursor: pointer;
+        @include font(12px, 22px, 400);
+        @include media("lg") {
+          @include font(17px, 27px, 400);
+        }
+      }
+    }
+  }
+
+  &__content {
+    cursor: pointer;
+    height: 100%;
+    border-radius: 6px;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    transition: 0.3s ease-in;
+
+    &-caption {
+      padding: 20px;
+
+      a {
+        font-size: 15px;
+        color: #000000;
+        font-weight: 600;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+          color: #155263;
+          text-decoration: none
+        }
+      }
+
+      & h4 {
+        @include font(20px, 20px, 500);
+        letter-spacing: 0.5px;
+        margin-bottom: 10px;
+        @include media("lg") {
+          @include font(22px, 22px, 500);
+        }
+      }
+
+      & p {
+        margin-top: 15px;
+        @include font(15px, 25px, 400);
+        color: $font-color-secondary;
+        @include media("lg") {
+          @include font(17px, 27px, 400);
+        }
+      }
+    }
+
+    &:hover {
+      transform: scale(1.03);
+      transition: 0.3s ease-in;
+      box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
+    }
+  }
+}

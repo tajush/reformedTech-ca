@@ -1,0 +1,32 @@
+@import "../variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+.our-achievement {
+  padding: 80px 0 80px 0;
+
+  @include media("lg") {
+    padding: 120px 0 120px 0;
+  }
+
+  & h2 {
+    color: $color-black;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    @include font(32px, 42px, 700);
+
+    @include media("lg") {
+      @include font(48px, 58px, 700);
+      margin-bottom: 15px;
+    }
+  }
+
+  & img {
+    height: calc(100vh - 50vh);
+    object-fit: contain;
+    width: 100%;
+    @include media("lg"){
+      width: 180px;
+    }
+  }
+}

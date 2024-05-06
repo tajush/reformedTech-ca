@@ -1,0 +1,101 @@
+@import "../variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+.client-review {
+  padding: 70px 0px;
+  background-color: $background-secondary;
+  @include media("lg") {
+    padding: 100px 0px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+    @include media("lg") {
+      text-align: left;
+      padding-right: 40px;
+    }
+    & h2 {
+      color: $color-black;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+      @include font(32px, 42px, 700);
+      @include media("lg") {
+        @include font(48px, 58px, 700);
+      }
+    }
+
+    & p {
+      color: $font-color-secondary;
+      @include font(16px, 26px, 400);
+      @include media("lg") {
+        @include font(18px, 28px, 400);
+      }
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    background-color: $color-white;
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px rgba(143, 143, 143, 0.2);
+    @include media("lg") {
+      padding: 40px;
+    }
+    &-slider {
+      transform: translate3d(0, 0, 0);
+
+      & i {
+        color: $font-color-tertiary;
+        font-size: 40px;
+        text-align: right;
+        margin-bottom: 30px;
+        @include media("lg") {
+          font-size: 70px;
+        }
+      }
+
+      & img {
+        width: 56px;
+        height: 56px;
+        border: none;
+        border-radius: 360px;
+      }
+
+      & h4 {
+        color: $font-color-primary;
+        @include font(20px, 30px, 600);
+        @include media("lg") {
+          @include font(24px, 34px, 600);
+        }
+      }
+
+      & span {
+        color: $font-color-tertiary;
+        @include font(15px, 25px, 600);
+      }
+
+      & p {
+        color: $font-color-secondary;
+        @include font(15px, 25px, 400);
+        margin: 20px 0px 0px;
+        min-height: 190px;
+        overflow: hidden;
+        @include media("lg") {
+          @include font(17px, 27px, 400);
+          min-height: 180px;
+        }
+      }
+    }
+
+    &-footer {
+      & i {
+        cursor: pointer;
+        font-size: 30px;
+        color: $font-color-secondary;
+        -webkit-text-stroke: 2px white;
+      }
+    }
+  }
+}

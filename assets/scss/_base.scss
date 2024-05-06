@@ -1,0 +1,53 @@
+@import "variables";
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; 
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: $font-primary;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: $font-secondary;
+    margin: 0;
+}
+
+p,
+figure {
+    margin: 0;
+}
+
+@media (min-width: 1200px) {
+    .container,
+    .container-sm,
+    .container-md,
+    .container-lg,
+    .container-xl {
+        max-width: 1200px;
+    }
+}
+
+hr {
+    background-color: $font-color-primary;
+}

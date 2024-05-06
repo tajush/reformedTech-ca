@@ -1,0 +1,83 @@
+@import "../variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+.client-says {
+  padding: 70px 0px;
+  @include media("lg") {
+    padding: 100px 0px;
+  }
+
+  &__icon {
+    margin-bottom: 30px;
+    @include media("lg") {
+      position: absolute;
+      right: 20px;
+      bottom: -170px;
+      margin-bottom: 10px;
+    }
+    & i {
+      color: $font-color-secondary;
+      font-size: 18px;
+      -webkit-text-stroke: 1.5px white;
+      cursor: pointer;
+      @include media("lg") {
+        font-size: 18px;
+        -webkit-text-stroke: 1.5px white;
+        cursor: pointer;
+      }
+    }
+
+    &-opacity {
+      opacity: 0.4;
+      @include media("lg") {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    @include media("lg") {
+    }
+    & h2 {
+      @include font(30px, 40px, 700);
+      margin-bottom: 30px;
+      @include media("lg") {
+        @include font(40px, 50px, 700);
+      }
+    }
+  }
+
+  &__content {
+    & img {
+      display: none;
+      @include media("lg") {
+        margin-right: 20px;
+        display: block;
+      }
+    }
+
+    & p {
+      @include font(20px, 30px, 500);
+      font-style: italic;
+      text-align: justify;
+      margin-bottom: 20px;
+      @include media("lg") {
+        @include font(22px, 32px, 500);
+      }
+    }
+
+    & span {
+      @include font(17px, 27px, 500);
+      @include media("lg") {
+        @include font(17px, 27px, 500);
+      }
+
+      &:last-child {
+        font-size: 15px;
+        color: $font-color-secondary;
+      }
+    }
+  }
+}

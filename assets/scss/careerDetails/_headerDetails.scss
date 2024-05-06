@@ -1,0 +1,7 @@
+@import "../variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+.header-details {
+    background-color: $background-primary;
+    height: 110px;
+}

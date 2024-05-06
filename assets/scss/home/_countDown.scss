@@ -1,0 +1,69 @@
+@import "../variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+.count-down {
+  background-image: url(../images/bg-image.jpg);
+  padding: 70px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+
+  @include media("lg") {
+    padding: 100px 0px;
+  }
+ 
+  &__header {
+    text-align: center;
+    margin-bottom: 50px;
+
+    & h2 {
+      color: $font-color-primary;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+      @include font(32px, 42px, 700);
+      @include media("lg") {
+        @include font(48px, 58px, 700);
+        margin-bottom: 15px;
+      }
+    }
+
+    & p {
+      color: $font-color-primary;
+      @include font(16px, 26px, 400);
+      @include media("lg") {
+        @include font(18px, 28px, 400);
+      }
+    }
+  }
+
+  &__content {
+    text-align: center;
+    & h2 {
+      color: $font-color-primary;
+      margin-bottom: 15px;
+      @include font(32px, 42px, 600);
+      @include media("lg") {
+        @include font(48px, 58px, 600);
+      }
+    }
+
+    & p {
+      color: $font-color-primary;
+      @include font(15px, 25px, 400);
+      @include media("lg") {
+        @include font(17px, 27px, 400);
+      }
+    }
+  }
+}
+
+.content-border__right {
+  border: none;
+  @include media("lg") {
+    border-right: 1px solid $font-color-primary;
+    &:last-child {
+      border: none;
+    }
+  }
+}

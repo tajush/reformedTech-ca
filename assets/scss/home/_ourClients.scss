@@ -1,0 +1,65 @@
+@import "../variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+.our-clients {
+  padding: 70px 0px;
+  @include media("lg") {
+    padding: 100px 0px;
+  } 
+
+  &__left {
+    text-align: center;
+    @include media("lg") {
+      margin-top: 30px;
+      text-align: left;
+    }
+    & span {
+      color: $font-color-primary;
+      text-transform: uppercase;
+      @include font(20px, 30px, 700);
+      @include media("lg") {
+        @include font(22px, 32px, 700);
+      }
+    }
+
+    & h2 {
+      color: $color-black;
+      letter-spacing: 0.5px;
+      @include font(40px, 50px, 700);
+      margin-top: 10px;
+      @include media("lg") {
+        @include font(48px, 58px, 700);
+        margin-top: 15px;
+      }
+    }
+
+    & h3 {
+      color: $font-color-secondary;
+      @include font(15px, 25px, 400);
+      margin-top: 10px;
+      @include media("lg") {
+        @include font(17px, 27px, 400);
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &__right {
+    margin-top: 30px;
+    @include media("lg") {
+      margin-top: 0;
+    }
+    & img {
+      height: 90px;
+      width: 100%;
+      transition: all 0.3s linear;
+
+      &:hover {
+        transform: scale(1.08);
+        transition: all 0.3s linear;
+        cursor: pointer;
+      }
+    }
+  }
+}

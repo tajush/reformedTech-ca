@@ -1,0 +1,90 @@
+@import "../variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+.web-development {
+  padding: 70px 0px;
+  @include media("lg") {
+    padding: 100px 0px;
+  }
+
+  &__content {
+    margin-bottom: 50px;
+    @include media("lg") {
+      margin-bottom: 100px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    & img {
+      margin-top: 40px;
+      @include media("lg") {
+        margin-top: 0px;
+        border-radius: 6px;
+      }
+    }
+
+    &-title {
+      & span {
+        color: $font-color-primary;
+        @include font(18px, 30px, 500);
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        @include media("lg") {
+          @include font(22px, 32px, 500);
+        }
+      }
+
+      & h4 {
+        color: $color-black;
+        @include font(30px, 40px, 500);
+        letter-spacing: 0.5px;
+        margin: 10px 0px 30px;
+        @include media("lg") {
+          @include font(40px, 50px, 500);
+        }
+      }
+
+      & p {
+        color: $font-color-secondary;
+        font-family: $font-primary;
+        @include font(15px, 25px, 400);
+        margin-bottom: 20px;
+        @include media("lg") {
+          @include font(17px, 27px, 400);
+        }
+      }
+    }
+    &-list {
+      display: flex;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      & div {
+        height: 10px;
+        width: 10px;
+        border: 8px solid $color-primary;
+        border-radius: 50%;
+        margin-right: 15px;
+        margin-top: 6px;
+        @include media("lg") {
+          height: 16px;
+          width: 16px;
+        }
+      }
+
+      & span {
+        color: $font-color-secondary;
+        font-family: $font-primary;
+        @include font(15px, 25px, 400);
+        text-transform: inherit;
+        @include media("lg") {
+          @include font(17px, 27px, 400);
+        }
+      }
+    }
+  }
+}

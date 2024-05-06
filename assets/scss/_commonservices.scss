@@ -1,0 +1,110 @@
+@import "variables";
+@import "abstracts/mixins";
+@import "abstracts/breakpoints";
+
+.common-services {
+    background-image: url(../images/services-bg.svg) !important;
+    background-repeat: no-repeat !important;
+    background-position: left bottom !important;    
+    background: #F5FAFA;
+    padding: 70px 0px;
+    @include media("lg") {
+      padding: 100px 0px;
+    }
+    &__header {
+        h2 {
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 67.2px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-family: 'Poppins';
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 28.9px;
+            margin-bottom: 20px;
+            @include media("lg") {
+                margin-bottom: 0;
+            }            
+        }
+        p:not(:last-child) { 
+            margin-bottom: 26px;
+        }        
+    } 
+    &__block {
+        background: #fff;
+        box-shadow: 0px 5px 20px -2px rgba(23, 23, 23, 0.05);
+        border-radius: 5px;
+        padding: 40px 30px;
+        margin-bottom: 30px;      
+        h3 {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 33.6px;
+            margin-bottom: 16px;
+        }
+        p {
+            font-family: 'Poppins';
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 28.9px;            
+        }
+        &--last {
+            @include media("lg") {
+                margin-bottom: 0;
+            }
+        }
+    } 
+    &__icon {
+        margin-bottom: 30px;
+    }  
+}
+
+.box-design {
+    background: #155263;
+    color: #fff;
+    width: 130px;
+    height: 130px;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    } 
+    h4 {
+        font-size: 15px;
+    }   
+    @include media("lg") {
+        background: #155263;
+        color: #fff;
+        width: 160px;
+        padding: 30px;
+        text-align: left;
+        border-radius: 5px;
+        height: 157px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h3 {
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 39.2px;
+            margin-bottom: 10px;
+        }
+        h4 {
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 23.8px;
+        }        
+    }
+    &__first {
+        margin-right: 30px;
+    }
+    &__second {
+        margin-bottom: 30px;
+    }
+}

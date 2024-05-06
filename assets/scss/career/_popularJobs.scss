@@ -1,0 +1,212 @@
+@import "../variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+.popular-jobs {
+  padding: 70px 0px;
+  @include media("lg") {
+    padding: 100px 0px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+    @include media("lg") {
+      margin-bottom: 80px;
+    }
+    & h2 {
+      @include font(30px, 40px, 700);
+      margin-bottom: 15px;
+      letter-spacing: 0.5px;
+      @include media("lg") {
+        margin-bottom: 25px;
+        @include font(48px, 58px, 700);
+      }
+    }
+  }
+
+  &__content {
+    margin-bottom: 30px;
+    &-item {
+      border: 1px solid #bdbdbd;
+      box-sizing: border-box;
+      border-radius: 3px;
+      padding: 20px;
+      cursor: pointer;
+	  transition: all 0.2s linear;
+      & h4 {
+        color: $font-color-secondary;
+        @include font(17px, 17px, 600);
+        margin-bottom: 15px;
+        @include media("lg") {
+          @include font(20px, 20px, 600);
+          margin-bottom: 15px;
+        }
+      }
+
+      & h6 {
+        @include media("lg") {
+          @include font(20px, 20px, 800);
+        }
+      }
+
+      & span {
+        @include font(14px, 24px, 400);
+        margin-right: 10px;
+        @include media("lg") {
+          @include font(14px, 24px, 400);
+          margin-right: 10px;
+        }
+        & i {
+          margin-right: 5px;
+        }
+      }
+      &--btn {
+        margin-top: 15px;
+        & button {
+          background: #f2f2f2;
+          color: $font-color-secondary;
+          border-radius: 50px;
+          height: 24px;
+          width: auto;
+          border: none;
+          @include font(14px, 24px, 400);
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 5px 10px;
+        }
+      }
+
+      &:hover {
+        background: $color-white;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 3px;
+        border: none;
+		transition: all 0.2s linear;
+      }
+    }
+  }
+
+  &__description {
+    text-align: center;
+    margin-top: 40px;
+
+    & h3 {
+      @include font(24px, 34px, 500);
+      margin-bottom: 20px;
+      @include media("lg") {
+        @include font(30px, 40px, 500);
+        margin-bottom: 25px;
+      }
+    }
+
+    & p {
+      @include font(14px, 24px, 400);
+      margin-bottom: 25px;
+      @include media("lg") {
+        @include font(17px, 27px, 400);
+        max-width: 700px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+      }
+    }
+
+    & a {
+      color: #ffa755;
+      @include font(17px, 27px, 500);
+      padding-bottom: 5px;
+      border-bottom: 0.5px solid #ffa755;
+      cursor: pointer;
+      text-decoration: none;
+      @include media("lg") {
+        @include font(20px, 27px, 500);
+      }
+    }
+  }
+
+  &__cvform {
+    text-align: center;
+
+    & span {
+      color: $color-primary;
+      @include font(17px, 27px, 500);
+      padding-bottom: 5px;
+      border-bottom: 0.5px solid $color-primary;
+      cursor: pointer;
+      text-decoration: none;
+      @include media("lg") {
+        @include font(20px, 27px, 500);
+      }
+    }
+    &-input {
+      & h3 {
+        @include font(17px, 27px, 500);
+        @include media("lg") {
+          @include font(24px, 27px, 600);
+        }
+      }
+      & p {
+        @include font(14px, 24px, 400);
+        margin-bottom: 10px;
+        @include media("lg") {
+          @include font(17px, 27px, 400);
+        }
+        & span {
+          color: red;
+        }
+      }
+      &--btn {
+        display: flex;
+        flex-flow: row-reverse;
+        &-cancle {
+			
+          & a {
+            text-decoration: none;
+            color: $color-black !important;
+            border: 1px solid red;
+            border-radius: 3px;
+            height: 40px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include font(17px, 27px, 400);
+            transition: all 0.2s linear;
+			cursor: pointer;
+			&:hover{
+				background-color: red;
+				color: $color-white !important;
+				transition: all 0.2s linear;
+			}
+          }
+        }
+
+        &-submit {
+			margin-left: 10px;
+          & a {
+            text-decoration: none;
+            background-color: $color-secondary;
+			color: $color-white !important;
+            border: none;
+            border-radius: 3px;
+            height: 40px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include font(17px, 27px, 400);
+            transition: all 0.2s linear;
+			cursor: pointer;
+			&:hover{
+				background-color: $color-primary;
+				transition: all 0.2s linear;
+			}
+          }
+        }
+      }
+    }
+  }
+}

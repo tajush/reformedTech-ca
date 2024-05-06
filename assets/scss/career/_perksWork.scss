@@ -1,0 +1,52 @@
+@import "../variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+.perks-work {
+  padding: 70px 0px;
+  background-color: $background-secondary;
+  @include media("lg") {
+    padding: 100px 0px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 80px;
+    @include media("lg") {
+      margin-bottom: 80px;
+    }
+    & h2 {
+      @include font(30px, 40px, 700);
+      margin-bottom: 15px;
+      letter-spacing: 0.5px;
+      @include media("lg") {
+        margin-bottom: 25px;
+        @include font(48px, 58px, 700);
+      }
+    }
+  }
+
+  &__content {
+    text-align: center;
+    @include media("lg") {
+      border-right: 1px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    &-item {
+      padding: 25px 0px;
+
+      & img {
+        margin-bottom: 20px;
+      }
+
+      & p {
+        color: $font-color-secondary;
+        @include font(14px, 24px, 400);
+        @include media("lg") {
+          @include font(17px, 27px, 400);
+        }
+      }
+    }
+  }
+}

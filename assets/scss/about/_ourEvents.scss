@@ -1,0 +1,70 @@
+@import "../variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+.our-event {
+    padding: 70px 0px;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 50px;
+        @include media("lg") {
+            margin-bottom: 80px;
+        }
+
+        & h2 {
+            color: $color-black;
+            @include font(30px, 40px, 700);
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+            @include media("lg") {
+                max-width: 700px;
+                margin: 0 auto;
+                @include font(40px, 50px, 700);
+                padding-bottom: 20px;
+            }
+        }
+
+        & p {
+            color: $font-color-secondary;
+            @include font(15px, 25px, 400);
+            @include media("lg") {
+                max-width: 700px;
+                margin: 0 auto;
+                @include font(17px, 27px, 400);
+            }
+        }
+    }
+
+    &__content {
+        margin-bottom: 50px;
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -10px;
+        }
+
+        .row .col-lg-6 {
+            position: relative;
+            width: 100%;
+            padding: 10px;
+        }
+
+        &-mainImage {
+            cursor: pointer;
+        }
+
+        &-annualImage {
+            cursor: pointer;
+        }
+    }
+
+    &__eventTitle {
+        text-align: center;
+        background: #edf8f8;
+        box-shadow: 0px 6px 30px rgba(99, 99, 99, 0.25);
+        border-radius: 0px 0px 6px 6px;
+        padding: 25px 0px;
+        @include font(24px, 35px, 500);
+    }
+}

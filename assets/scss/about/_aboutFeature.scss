@@ -1,0 +1,125 @@
+@import "../variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+.about-feature {
+  background-color: $background-tertiary;
+  padding: 70px 0px;
+  position: relative;
+  @include media("lg") {
+    padding: 100px 0px;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+    @include media("lg") {
+      margin-bottom: 80px;
+    }
+    & h2 {
+      color: $color-black;
+      @include font(30px, 40px, 700);
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+      @include media("lg") {
+        max-width: 700px;
+        margin: 0 auto;
+        @include font(40px, 50px, 700);
+        padding-bottom: 20px;
+      }
+    }
+
+    & p {
+      color: $font-color-secondary;
+      @include font(15px, 25px, 400);
+      @include media("lg") {
+        max-width: 700px;
+        margin: 0 auto;
+        @include font(17px, 27px, 400);
+      }
+    }
+  }
+  & img {
+    display: none;
+    @include media("lg") {
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+    }
+  }
+
+  // & h2 {
+  //   text-align: center;
+  //   color: $color-black;
+  //   @include font(30px, 40px, 700);
+  //   margin-bottom: 50px;
+  //   @include media("lg") {
+  //     @include font(40px, 50px, 700);
+  //     margin-bottom: 80px;
+  //   }
+  // }
+
+  &__content-dark {
+    background-color: $background-primary;
+    padding: 30px 15px;
+    border-radius: 6px;
+    color: $color-white;
+    height: 100%;
+    @include media("lg") {
+    }
+
+    & i {
+      font-size: 30px;
+      margin-top: 3px;
+      @include media("lg") {
+      }
+    }
+
+    & h4 {
+      @include font(20px, 30px, 500);
+      margin-bottom: 15px;
+      @include media("lg") {
+        @include font(22px, 30px, 600);
+      }
+    }
+
+    & p {
+      @include font(15px, 25px, 400);
+      @include media("lg") {
+        @include font(17px, 27px, 400);
+      }
+    }
+  }
+
+  &__content-light {
+    background-color: $color-white;
+    padding: 30px 15px;
+    border-radius: 6px;
+    height: 100%;
+    color: $font-color-primary;
+    @include media("lg") {
+    }
+
+    & i {
+      font-size: 30px;
+      margin-top: 3px;
+      @include media("lg") {
+      }
+    }
+
+    & h4 {
+      @include font(20px, 30px, 500);
+      margin-bottom: 15px;
+      @include media("lg") {
+        @include font(22px, 30px, 600);
+      }
+    }
+
+    & p {
+      @include font(15px, 25px, 400);
+      @include media("lg") {
+        @include font(17px, 27px, 400);
+      }
+    }
+  }
+}

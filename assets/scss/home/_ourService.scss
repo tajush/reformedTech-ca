@@ -1,0 +1,246 @@
+@import "../variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+.our-service {
+  padding: 70px 0px 0px;
+  @include media("lg") {
+    padding: 100px 0px 0px; 
+  }
+
+  &__image {
+    display: none;
+    @include media("lg") {
+      position: relative;
+      height: auto;
+      display: block;
+    }
+    &-photo {
+      @include media("lg") {
+        position: absolute;
+      }
+      &--p1 {
+        & img {
+          border-radius: 4px;
+          // height: 430px;
+          width: 100%;
+        }
+        @include media("lg") {
+          left: 150px;
+          top: 30px;
+        }
+      }
+
+      &--p2 {
+        & img {
+          border-radius: 4px;
+          height: 286px;
+          width: 100%;
+          
+        }
+        @include media("lg") {
+          left: 0px;
+          top: 385px;
+        }
+      }
+
+      &--p3 { 
+        & img {
+          border-radius: 4px;
+          height: 186px;
+          width: 100%;
+        }
+        @include media("lg") {
+          left: 220px;
+          top: 555px;
+        }
+      }
+    }
+
+    &-dot1 {
+      display: none;
+      @include media("lg") {
+        background-color: #ff6f3c;
+        height: 72px;
+        width: 72px;
+        border-radius: 50%;
+        position: absolute;
+        top: 330px;
+        right: 90px;
+        display: block;
+        animation: moveUpdown 3s linear infinite alternate;
+      }
+    }
+
+    &-dot2 {
+      display: none;
+      @include media("lg") {
+        background-color: #ffc93c;
+        height: 72px;
+        width: 72px;
+        border-radius: 50%;
+        position: absolute;
+        top: 500px;
+        left: -35px;
+        display: block;
+        animation: moveUpdown 3s linear infinite alternate;
+      }
+    }
+
+    &-dot3 {
+      display: none;
+      @include media("lg") {
+        background-color: #ff9a3c;
+        height: 56px;
+        width: 56px;
+        border-radius: 50%;
+        position: absolute;
+        top: 710px;
+        left: 375px;
+        display: block;
+        animation: moveLeftright 3s linear alternate infinite;
+      }
+    }
+  }
+
+  &__image1 {
+    display: none;
+    @include media("lg") {
+      position: relative;
+      height: auto;
+      display: block;
+    }
+
+    &-photo {
+      @include media("lg") {
+        position: absolute;
+      }
+      &--p1 {
+        & img {
+          border-radius: 4px;
+          // height: 430px;
+          width: 100%;
+        }
+        @include media("lg") {
+          right: 0px;
+          top: 30px;
+        }
+      }
+
+      &--p2 {
+        & img {
+          border-radius: 4px;
+          height: 286px;
+          width: 100%;
+        }
+        @include media("lg") {
+          left: 165px;
+          top: 375px;
+        }
+      }
+
+      &--p3 {
+        & img {
+          border-radius: 4px;
+          height: 186px;
+          width: 100%;
+        }
+        @include media("lg") {
+          left: 350px;
+          top: 555px;
+        }
+      }
+    }
+
+    &-dot1 {
+      display: none;
+      @include media("lg") {
+        background-color: #ff6f3c;
+        height: 72px;
+        width: 72px;
+        border-radius: 50%;
+        position: absolute;
+        top: 330px;
+        right: -30px;
+        display: block;
+        animation: moveUpdown 3s linear infinite alternate;
+      }
+    }
+
+    &-dot2 {
+      display: none;
+      @include media("lg") {
+        background-color: #ffc93c;
+        height: 72px;
+        width: 72px;
+        border-radius: 50%;
+        position: absolute;
+        top: 500px;
+        left: 130px;
+        display: block;
+        animation: moveUpdown 3s linear infinite alternate;
+      }
+    }
+
+    &-dot3 {
+      display: none;
+      @include media("lg") {
+        background-color: #ff9a3c;
+        height: 56px;
+        width: 56px;
+        border-radius: 50%;
+        position: absolute;
+        top: 710px;
+        left: 505px;
+        display: block;
+        animation: moveLeftright 3s linear alternate infinite;
+      }
+    }
+  }
+
+  &__content {
+    margin-bottom: 70px;
+    text-align: center;
+    & a:hover,
+    & a:focus {
+      text-decoration: none;
+    }
+    @include media("lg") {
+      text-align: left;
+      margin-bottom: 50px;
+    }
+
+    &:last-child {
+      margin-bottom: 70px;
+      @include media("lg") {
+        margin-bottom: 100px;
+      }
+    }
+    & img {
+      height: 63px;
+      width: auto;
+      margin-bottom: 15px;
+      @include media("lg") {
+        margin-bottom: 20px;
+      }
+    }
+
+    & h4 {
+      color: $font-color-primary;
+      @include font(20px, 30px, 600);
+      margin-bottom: 5px;
+      @include media("lg") {
+        @include font(24px, 34px, 600);
+        margin-bottom: 10px;
+      }
+    }
+
+    & p {
+      color: $font-color-secondary;
+      @include font(15px, 25px, 400);
+      @include media("lg") {
+        @include font(17px, 27px, 400);
+      }
+    }
+  }
+}

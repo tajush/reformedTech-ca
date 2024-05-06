@@ -1,0 +1,384 @@
+@import "variables";
+@import "abstracts/mixins";
+@import "abstracts/breakpoints";
+
+.hire-team {
+  padding: 70px 0px;
+  @include media("lg") {
+    padding: 100px 0px;
+  }
+
+  & img {
+    margin-bottom: 20px;
+    @include media("lg") {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0px;
+    box-shadow: 0px 10px 30px rgba(99, 99, 99, 0.25);
+    border-radius: 6px;
+    @include media("lg") {
+      border-radius: 0px 0px 6px 6px;
+    }
+
+    & h4 {
+      color: $color-black;
+      @include font(20px, 30px, 700);
+      @include media("lg") {
+        @include font(24px, 34px, 700);
+      }
+    }
+  }
+
+  &__btn {
+    text-align: center;
+    margin-top: 50px;
+
+    & a {
+      text-decoration: none;
+      background-color: $color-secondary;
+      color: $color-white;
+      border: none;
+      border-radius: 3px;
+      height: 84px;
+      width: 366px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      @include font(32px, 27px, 700);
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: $color-primary;
+        color: $color-black;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+.offshore-development {
+  padding: 70px 0px;
+  background-color: $background-secondary;
+  @include media("lg") {
+    padding: 100px 0px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 80px;
+    & h2 {
+      color: $color-black;
+      @include font(30px, 40px, 600);
+      margin-bottom: 20px;
+      @include media("lg") {
+        @include font(40px, 50px, 600);
+      }
+    }
+
+    & p {
+      color: $color-black;
+      @include font(15px, 25px, 400);
+      @include media("lg") {
+        @include font(17px, 27px, 400);
+      }
+    }
+  }
+
+  &__content {
+    text-align: center;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.18);
+    border-radius: 0px 0px 6px 6px;
+    display: flex;
+    height: 100%;
+    padding: 30px 10px;
+    background-color: $color-white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease-in-out;
+    }
+
+    & img {
+      margin-bottom: 30px;
+    }
+
+    & h4 {
+      color: $color-black;
+      @include font(20px, 30px, 600);
+      margin-bottom: 10px;
+      @include media("lg") {
+        @include font(24px, 34px, 700);
+        margin-bottom: 15px;
+      }
+    }
+    & p {
+      color: $color-black;
+      @include font(15px, 25px, 400);
+      @include media("lg") {
+        @include font(17px, 27px, 400);
+      }
+    }
+  }
+}
+
+.why-people {
+  padding: 70px 0px;
+  background-color: $background-secondary;
+  @include media("lg") {
+    padding: 100px 0px;
+  }
+
+  &__prefix {
+    &-photo {
+      background-color: #ffffff;
+      z-index: 2;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0px 10px 30px rgb(99 99 99 / 25%);
+
+      &--1 {
+        display: none;
+        @include media("lg") {
+          display: flex;
+          position: absolute;
+          left: -20px;
+          top: -30px;
+          z-index: 1;
+        }
+      }
+
+      &--2 {
+        display: none;
+        @include media("lg") {
+          display: flex;
+          background-color: #27ae60;
+          height: 176px;
+          width: 88px;
+          border-bottom-right-radius: 100px;
+          border-top-right-radius: 100px;
+          position: absolute;
+          top: -40px;
+          right: 40px;
+          z-index: 1;
+          animation: moveToLeftRight 3s linear infinite alternate;
+        }
+      }
+
+      &--3 {
+        display: none;
+        @include media("lg") {
+          display: flex;
+          background-color: #ffa755;
+          height: 88px;
+          width: 176px;
+          border-bottom-left-radius: 100px;
+          border-bottom-right-radius: 100px;
+          position: absolute;
+          left: -40px;
+          bottom: -40px;
+          z-index: 1;
+          animation: rightToLeft 5s linear infinite alternate;
+        }
+      }
+    }
+  }
+
+  &__suffix {
+    display: flex;
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &-icon {
+      flex: 0 0 75px;
+    }
+    &-title {
+      width: 100%;
+      margin-top: -7px;
+      & h4 {
+        color: $color-black;
+        @include font(20px, 30px, 600);
+        margin-bottom: 5px;
+        @include media("lg") {
+          @include font(22px, 32px, 600);
+          margin-bottom: 10px;
+        }
+      }
+      & p {
+        color: $font-color-secondary;
+        @include font(15px, 25px, 400);
+        @include media("lg") {
+          @include font(17px, 27px, 400);
+        }
+      }
+    }
+  }
+}
+
+.working-process {
+  padding: 70px 0px;
+  @include media("lg") {
+    padding: 100px 0px;
+  }
+
+  &__prefix {
+    margin-bottom: 40px;
+    padding: 25px 35px;
+    border: 2px solid $font-color-secondary;
+    border-radius: 3px;
+    height: 100%;
+
+    .custom-control-label {
+      margin-left: 0px;
+      cursor: pointer;
+    }
+
+    .custom-control-input:checked ~ .custom-control-label::before {
+      border: 2px solid $color-secondary;
+      background-color: $color-primary;
+    }
+    .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+      background-image: none;
+    }
+
+    &-radioTitle {
+      @include font(18px, 28px, 600);
+      color: $font-color-secondary;
+    }
+  }
+  &__suffix {
+    position: relative;
+    box-shadow: 0px 10px 30px rgba(99, 99, 99, 0.25);
+    &-content {
+      border-radius: 0px 0px 10px 10px;
+      & p {
+        color: $font-color-secondary;
+        @include font(15px, 25px, 500);
+        padding: 30px;
+        background-color: $color-white;
+        @include media("lg") {
+          @include font(18px, 28px, 500);
+        }
+      }
+    }
+    &-image {
+      &--1 {
+        display: none;
+        @include media("lg") {
+          display: flex;
+          position: absolute;
+          top: -30px;
+          right: -30px;
+          z-index: -1;
+        }
+      }
+
+      &--2 {
+        display: none;
+        @include media("lg") {
+          display: flex;
+          background-color: #ffa755;
+          height: 176px;
+          width: 176px;
+          border-radius: 100px;
+          position: absolute;
+          right: -50px;
+          bottom: 0px;
+          z-index: -1;
+          animation: moveUpdown 2s linear infinite alternate;
+        }
+      }
+      &--3 {
+        display: none;
+        @include media("lg") {
+          display: flex;
+          background-color: #27ae60;
+          height: 176px;
+          width: 88px;
+          border-bottom-left-radius: 100px;
+          border-top-left-radius: 100px;
+          position: absolute;
+          top: -50px;
+          left: 0px;
+          z-index: -1;
+          animation: rightToLeft 5s linear infinite alternate;
+        }
+      }
+    }
+  }
+}
+
+.hire-developers {
+  padding: 70px 0px;
+  background-color: $font-color-primary;
+  position: relative;
+  @include media("lg") {
+    padding: 100px 0px;
+  }
+
+  &__content {
+    text-align: center;
+
+    & h2 {
+      color: $color-white;
+      @include font(32px, 42px, 700);
+      margin-bottom: 15px;
+      @include media("lg") {
+        @include font(48px, 58px, 700);
+      }
+    }
+    & p {
+      @include font(15px, 25px, 400);
+      color: $color-white;
+      @include media("lg") {
+        @include font(17px, 27px, 400);
+      }
+    }
+    & a {
+      margin-top: 50px;
+      text-decoration: none;
+      background-color: $color-white;
+      color: $color-secondary;
+      border: none;
+      border-radius: 3px;
+      height: 84px;
+      width: 366px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      @include font(32px, 42px, 700);
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+
+  &__leftTop {
+    display: none;
+    @include media("lg") {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+    }
+  }
+
+  &__rightBottom {
+    display: none;
+    @include media("lg") {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: block;
+    }
+  }
+}

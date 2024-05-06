@@ -1,0 +1,36 @@
+{
+  "name": "rt-new-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@nuxtjs/apollo": "^4.0.1-rc.5",
+    "@nuxtjs/axios": "^5.12.5",
+    "@nuxtjs/google-fonts": "^3.0.0",
+    "@nuxtjs/robots": "^2.5.0",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "axios": "^0.21.4",
+    "bootstrap": "^4.6.0",
+    "bootstrap-vue": "^2.21.2",
+    "core-js": "^3.12.1",
+    "graphql-tag": "^2.12.6",
+    "nuxt": "^2.15.5",
+    "nuxt-canonical": "^1.0.6",
+    "nuxt-seo": "^1.6.1",
+    "nuxt-ssr-cache": "^1.5.2",
+    "v-viewer": "^1.6.4",
+    "vue-carousel": "^0.18.0",
+    "vue-fb-customer-chat": "^0.2.0",
+    "vue-slick-carousel": "^1.0.6"
+  },
+  "devDependencies": {
+    "sass": "^1.32.12",
+    "sass-loader": "^10.1.1"
+  }
+}

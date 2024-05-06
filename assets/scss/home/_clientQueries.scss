@@ -1,0 +1,53 @@
+@import "../variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+ 
+.featured-faq {
+
+  padding: 70px 0px;
+  @include media("lg") {
+    padding: 100px 0px;
+  }
+
+  &__style {
+    background-color: $color-white;
+    padding: 24px 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+    @include media("lg") {
+      padding: 24px 40px;
+    }
+  }
+
+  &__button {
+    margin-top: 50px;
+    text-align: center;
+
+    & h2 {
+      color: $color-black;
+      margin-bottom: 30px;
+      @include media("lg") {
+        @include font(32px, 42px, 600);
+      }
+    }
+    & a {
+      text-decoration: none;
+      background-color: $color-primary;
+      color: $color-white;
+      border: none;
+      border-radius: 3px;
+      height: 54px;
+      width: 200px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      @include font(20px, 27px, 600);
+      transition: all 0.3s linear;
+      &:hover {
+        background-color: $color-secondary;
+        transition: all 0.3s linear;
+      }
+    }
+  }
+}

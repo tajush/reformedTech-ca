@@ -1,0 +1,11 @@
+.brand-carousel{
+    padding: 100px 0px;
+    background: $color-white;
+
+    & img{
+        height: 50px;
+        width: 200px;
+        // padding: 10px 10px;
+        // box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+    }
+}

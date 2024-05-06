@@ -1,0 +1,63 @@
+@import "variables";
+@import "abstracts/mixins";
+@import "abstracts/breakpoints";
+
+.section-404 {
+  &__content {
+    text-align: center;
+    @include media("lg") {
+      background-image: url(../images/404/bg.svg);
+      background-position: top;
+      background-repeat: no-repeat;
+      height: 900px;
+      background-size: cover;
+    }
+    &-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 70px 0px;
+      @include media("lg") {
+      }
+
+      & img {
+        animation: moveUpdown 2s linear infinite alternate;
+      }
+
+      & h2 {
+        color: $color-black;
+        letter-spacing: 0.5px;
+        @include font(32px, 42px, 600);
+        margin: 10px 0px;
+        @include media("lg") {
+          @include font(52px, 62px, 600);
+          margin: 20px 0px 10px;
+        }
+      }
+
+      & p {
+        color: $font-color-secondary;
+        @include font(16px, 26px, 400);
+        margin-bottom: 20px;
+        @include media("lg") {
+          @include font(22px, 32px, 400);
+          margin-bottom: 40px;
+        }
+      }
+
+      & button {
+        background-color: $color-secondary;
+        color: $color-white;
+        border: none;
+        width: 273px;
+        height: 62px;
+        @include font(22px, 27px, 600);
+
+        &:hover {
+          background-color: $color-primary;
+          color: $color-black;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@import "variables";
+@import "abstracts/mixins";
+@import "abstracts/breakpoints";
+
+.common-process {
+    background: #fff;
+    padding: 70px 0px;
+    text-align: center;
+    @include media("lg") {
+      padding: 90px 0px;
+    }
+    &__header {
+        h2 {
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 67.2px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-family: 'Poppins';
+            max-width: 719.95px;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 28.9px;
+            margin-bottom: 20px;
+            @include media("lg") {
+                margin-bottom: 0;
+            }            
+        }     
+    }     
+}
+.process-block {
+    margin-top: 20px;
+    @include media("lg") {
+        position: relative;
+        &__arrow {
+            position: absolute;
+            top: 25px;
+            right: -50px;
+            img {
+                width: 75px;
+            }
+        }
+        h4 {
+            font-size: 20px !important;
+        }
+    }
+    @include media("xl") {
+        margin-top: 60px;        
+        position: relative;
+        &__arrow {
+            position: absolute;
+            top: 25px;
+            right: -70px !important;
+        }
+        img {
+            width: auto !important;
+        } 
+        h4 {
+            font-size: 20px !important;
+        }       
+    }    
+    h4 {
+        font-family: 'Inter';
+        font-weight: 500;
+        line-height: 28.8px;
+        margin-top: 30px;
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,63 @@
+@import "variables";
+@import "abstracts/mixins";
+@import "abstracts/breakpoints";
+
+.casestudy {
+    background: #FCFCF0;
+    padding: 70px 0px;
+    text-align: center;
+    @include media("lg") {
+      padding: 90px 0px 120px 0px;
+    }
+    h3 {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 67.2px;
+        margin-bottom: 20px;
+    }
+    &__slider {
+        margin-top: 60px;
+        padding: 15px;
+        img {
+            background: #ffffff;
+            padding: 5px;
+            border: 1px solid #e3e3e3;
+            border-radius: 2px;
+            box-shadow: 6px 6px 0px 0px #efefef;  
+        }
+    }
+    &__info {
+        h4 {
+            margin-top: 30px;
+            margin-bottom: 5px;
+            font-size: 16px;
+            font-weight: 500;
+            font-family: "Inter";
+            line-height: 36.56px;
+            a {
+                font-size: 18px;
+                color: #000000;
+                font-weight: 600;
+                text-transform: uppercase;
+                &:hover,
+                &:focus {
+                    color: #1b677c;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &__link {
+        margin-top: 10px;  
+        a {
+            font-size: 15px;  
+            color: #000000;
+            font-weight: 600;
+            &:hover,
+            &:focus {
+                color: #1b677c;
+                text-decoration: none;
+            }        
+        }        
+    }
+}

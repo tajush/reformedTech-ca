@@ -1,0 +1,34 @@
+@import "variables";
+@import "abstracts/mixins";
+@import "abstracts/breakpoints";
+
+.terms-policy {
+    padding: 70px 0px;
+    @include media("lg") {
+      padding: 100px 0px;
+    }
+
+    & h4 {
+        color: $color-black;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        @include font(20px, 30px, 700);
+        @include media("lg") {
+          @include font(24px, 34px, 700);
+        }
+      }
+      
+    & p {
+        @include font(18px, 28px, 400);
+        margin-bottom: 8px;
+    }
+   
+    & ul {
+        margin-top: 10px;
+        padding-left: 4rem;
+    } 
+}
+
+.domain {
+    color: #1155CC !important;
+}

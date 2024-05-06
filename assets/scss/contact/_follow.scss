@@ -1,0 +1,71 @@
+@import "../variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+.follow-section {
+  padding: 70px 0px;
+  background-color: $background-tertiary;
+  @include media("lg") {
+    padding: 100px 0px;
+  }
+
+  & h2 {
+    text-align: center;
+    @include font(30px, 40px, 700);
+    margin-bottom: 50px;
+    @include media("lg") {
+      @include font(48px, 58px, 700);
+      margin-bottom: 80px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    @include media("lg") {
+      justify-content: center;
+      flex-direction: row;
+    }
+    & div {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0px;
+        margin-right: 0px;
+      }
+      @include media("lg") {
+        margin-bottom: 0px;
+        margin-right: 30px;
+      }
+    }
+    & i {
+      margin-right: 15px;
+    }
+    & a {
+      background-color: transparent;
+      color: $color-secondary;
+      border: 1px solid $background-primary;
+      border-radius: 100px;
+      @include font(17px, 27px, 600);
+      height: 50px;
+      width: 170px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      @include media("lg") {
+        @include font(20px, 27px, 600);
+        height: 60px;
+        width: 180px;
+      }
+      &:hover {
+        background-color: $background-primary;
+        color: $color-white;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}

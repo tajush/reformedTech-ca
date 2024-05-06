@@ -1,0 +1,72 @@
+@import "../variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+.skilled-people {
+  padding: 70px 0px;
+  background-color: $background-tertiary;
+  @include media("lg") {
+    padding: 100px 0px;
+  }
+
+  &__image {
+    justify-content: center;
+    display: flex;
+    margin-bottom: 20px;
+    @include media("lg") {
+      justify-content: center;
+      display: flex;
+      margin-bottom: 0;
+    }
+    &-p1 {
+      margin-right: 20px;
+      @include media("lg") {
+        margin-right: 20px;
+      }
+    }
+
+    &-p2 {
+      @include media("lg") {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 30px;
+    text-align: center;
+    @include media("lg") {
+      margin-top: 0px;
+      text-align: left;
+    }
+    & h2 {
+      color: $color-black;
+      @include font(30px, 40px, 700);
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+      @include media("lg") {
+        @include font(40px, 50px, 700);
+        max-width: 430px;
+      }
+    }
+
+    & p {
+      color: $font-color-secondary;
+      @include font(15px, 25px, 400);
+      margin-bottom: 10px;
+      @include media("lg") {
+        @include font(17px, 27px, 400);
+        margin-bottom: 20px;
+      }
+    }
+
+    & span {
+      color: $font-color-secondary;
+      display: block;
+      @include font(15px, 25px, 400);
+      @include media("lg") {
+        @include font(17px, 27px, 400);
+      }
+    }
+  }
+}

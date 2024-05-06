@@ -1,0 +1,356 @@
+@import "variables";
+@import "abstracts/mixins";
+@import "abstracts/breakpoints";
+
+.blog-content {
+  padding: 70px 0px;
+  @include media("lg") {
+    padding: 100px 0px;
+  }
+
+  /*list grid button css start*/
+  &__listGridButton {
+    font-size: 30px;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+    .btn-primary {
+      color: #fff !important;
+      background-color: $background-primary !important;
+      border-color: $color-secondary !important;
+      box-shadow: none !important;
+    }
+
+    .btn-outline-primary {
+      color: $color-secondary;
+      border-color: $color-secondary;
+    }
+    .btn-outline-primary:hover {
+      color: $color-white;
+      background-color: $background-primary !important;
+    }
+  }
+  /*list grid button css end*/
+
+  &__workshop {
+    margin-bottom: 35px;
+    border-radius: 6px;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+
+    &-content {
+      padding: 20px;
+
+      & h4 {
+        margin-top: 10px;
+        @include font(20px, 30px, 600);
+        letter-spacing: 0.5px;
+        @include media("lg") {
+          @include font(24px, 34px, 600);
+        }
+      }
+
+      & p {
+        margin-top: 10px;
+        @include font(14px, 24px, 400);
+        color: $font-color-secondary;
+        @include media("lg") {
+          @include font(16px, 26px, 400);
+        }
+      }
+    }
+  }
+
+  &__content {
+    margin-bottom: 35px;
+    border-radius: 6px;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+
+    &-caption {
+      padding: 20px;
+
+      & span {
+        @include font(14px, 16px, 400);
+        color: $font-color-primary;
+      }
+
+      & h4 {
+        margin-top: 20px;
+        @include font(20px, 30px, 600);
+        letter-spacing: 0.5px;
+        @include media("lg") {
+          @include font(24px, 34px, 600);
+        }
+      }
+
+      & p {
+        margin-top: 15px;
+        @include font(14px, 24px, 400);
+        color: $font-color-secondary;
+        @include media("lg") {
+          @include font(16px, 26px, 400);
+        }
+      }
+
+      &-continue {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+
+        & img {
+          width: 35px;
+          height: 35px;
+          border-radius: 6px;
+          margin-right: 5px;
+        }
+
+        & span {
+          @include font(14px, 24px, 400);
+          color: $color-black;
+        }
+      }
+    }
+  }
+
+  &__grid {
+    margin-bottom: 35px;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    border-radius: 6px;
+
+    img {
+      width: 100%;
+    }
+
+    &-title {
+      padding: 20px;
+      position: relative;
+
+      &-type {
+        position: absolute;
+        top: -11px;
+        left: 30px;
+        color: $color-white;
+        padding: 2px 10px;
+        font-size: 12px;
+        line-height: 16px;
+        border-radius: 2px;
+        text-transform: uppercase;
+      }
+
+      & h4 {
+        margin-top: 20px;
+        @include font(20px, 30px, 600);
+        letter-spacing: 0.5px;
+        @include media("lg") {
+          @include font(24px, 30px, 600);
+        }
+      }
+
+      & p {
+        margin-top: 15px;
+        @include font(14px, 24px, 400);
+        color: $font-color-secondary;
+        @include media("lg") {
+          @include font(16px, 26px, 400);
+        }
+      }
+
+      &-comment {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        color: $color-black;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+
+        & span {
+          font-weight: 400;
+          color: #535a60;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  &__issues {
+    margin-bottom: 35px;
+  }
+  /*pagination css start*/
+
+  &__pagination {
+    margin-top: 35px;
+
+    .pagination li {
+      margin-right: 10px;
+
+      .page-link {
+        color: $font-color-primary;
+        border-radius: 4px;
+      }
+    }
+
+    .page-item.active .page-link {
+      z-index: 3;
+      color: #fff;
+      background-color: $font-color-primary;
+      border-color: $font-color-primary;
+    }
+  }
+
+  /*pagination css end*/
+
+  &__input {
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 0px 0.5px 1px rgba(51, 77, 114, 0.1), 0px 1.6px 3.6px rgba(51, 77, 114, 0.15);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    @include media("lg") {
+      padding: 40px;
+      margin-top: 0px;
+    }
+
+    & h4 {
+      @include font(20px, 30px, 600);
+      margin-bottom: 10px;
+      @include media("lg") {
+        @include font(24px, 34px, 600);
+      }
+    }
+
+    & p {
+      @include font(16px, 26px, 400);
+      color: $font-color-secondary;
+      margin-bottom: 10px;
+      @include media("lg") {
+        @include font(16px, 26px, 400);
+      }
+    }
+
+    & button {
+      display: block;
+      width: 100%;
+      height: 50px;
+      background-color: $font-color-primary;
+      border-radius: 5px;
+      padding: 10px;
+    }
+  }
+
+  &__media {
+    padding-top: 50px;
+    &-socialMedia {
+      text-align: center;
+      box-shadow: 0px 0.5px 1px rgba(51, 77, 114, 0.1), 0px 1.6px 3.6px rgba(51, 77, 114, 0.15);
+      height: 120px;
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      & h6 {
+        margin-top: 10px;
+        @include media("lg") {
+          @include font(18px, 28px, 600);
+        }
+      }
+
+      & p {
+        @include font(12px, 22px, 400);
+        color: $font-color-secondary;
+        @include media("lg") {
+          @include font(12px, 22px, 400);
+        }
+      }
+    }
+  }
+
+  &__category {
+    padding-top: 50px;
+    & h4 {
+      @include font(20px, 30px, 600);
+      margin-bottom: 10px;
+      @include media("lg") {
+        @include font(24px, 34px, 600);
+        margin-bottom: 15px;
+      }
+    }
+
+    & ul {
+      list-style-position: inside;
+      list-style-type: none;
+
+      & li::before {
+        content: "•";
+        color: $font-color-primary;
+        display: inline-block;
+        width: 15px;
+        font-size: 22px;
+      }
+      & li {
+        color: $color-black;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__news {
+    padding-top: 50px;
+    & h4 {
+      @include font(20px, 30px, 600);
+      margin-bottom: 10px;
+      @include media("lg") {
+        @include font(24px, 34px, 600);
+        margin-bottom: 20px;
+      }
+    }
+
+    &-content {
+      padding: 10px 0px;
+
+      & h4 {
+        @include font(14px, 18px, 500);
+        margin-bottom: 3px;
+        @include media("lg") {
+          @include font(16px, 20px, 500);
+        }
+      }
+
+      & span {
+        color: $font-color-primary;
+        @include font(14px, 16px, 400);
+        @include media("lg") {
+          @include font(14px, 16px, 400);
+        }
+      }
+    }
+  }
+
+  &__tags {
+    padding-top: 50px;
+    & h4 {
+      @include font(20px, 30px, 600);
+      margin-bottom: 10px;
+      @include media("lg") {
+        @include font(24px, 34px, 600);
+        margin-bottom: 20px;
+      }
+    }
+
+    & button {
+      display: inline-block;
+      border: 1px solid #e0e0e0;
+      border-radius: 3px;
+      background-color: transparent;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      color: $font-color-secondary;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}

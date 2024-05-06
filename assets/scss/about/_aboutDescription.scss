@@ -1,0 +1,49 @@
+@import "../variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+.about-description {
+    padding: 35px 0px 70px;
+    @include media("lg") {
+        padding: 0;
+    }
+  &__content {
+    padding: 30px 0px;
+    @include media("lg") {
+      padding: 0px 15px;
+    }
+    & h4 {
+      color: $color-black;
+      margin-bottom: 20px;
+      @include font(22px, 32px, 700);
+      @include media("lg") {
+        margin: 30px 0px 15px;
+        @include font(28px, 34px, 700);
+      }
+    }
+
+    & p {
+      color: $font-color-secondary;
+      @include font(15px, 25px, 400);
+      @include media("lg") {
+        @include font(17px, 27px, 400);
+      }
+    }
+  }
+
+  & img {
+    width: 100%;
+    @include media("lg") {
+    }
+  }
+}
+
+.descriptionBlock_content_row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.descriptionBlock_content_col{
+  flex-grow: 1;
+  width: 33%;
+}

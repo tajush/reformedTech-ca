@@ -1,0 +1,161 @@
+@import "variables";
+@import "abstracts/mixins";
+@import "abstracts/breakpoints";
+
+.primary-header {
+  background-color: $background-primary;
+  position: relative;
+  padding: 55px 0px 0px;
+  @include media("lg") {
+    padding: 100px 0px 0px;
+  }
+
+  &__title {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 400px;
+
+    @include media("lg") {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    & h1 {
+      color: $color-white;
+      @include font(30px, 40px, 700);
+      margin-bottom: 20px;
+      @include media("lg") { 
+        @include font(60px, 70px, 700);
+      }
+    }
+
+    & span {
+      color: $color-white;
+      @include font(17px, 27px, 400);
+      @include media("lg") {
+        @include font(17px, 27px, 400);
+        max-width: 780px;
+      }
+    }
+
+    &-form {
+      margin-bottom: 20px;
+      @include media("lg") {
+        margin-bottom: 20px;
+      }
+
+      & i {
+        font-size: 20px;
+        margin: 0px 5px;
+        @include media("lg") {
+          font-size: 30px;
+          margin: 0px 10px;
+        }
+      }
+      .form-control {
+        background-color: transparent;
+        color: $color-white;
+        padding: 20px;
+        @include media("lg") {
+          background-color: transparent;
+          width: 500px;
+          color: $color-white;
+          padding: 25px 20px;
+        }
+      }
+    }
+  }
+
+  &__shape {
+    
+    @include media("lg") {
+      height: 460px;
+      position: relative;
+      background-image: url(../images/lineShape.png);
+      background-position: center top;
+
+      background-size: inherit;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+    &--1 {
+      display: none;
+      @include media("lg") {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        animation: moveDown 2s infinite linear;
+        animation-delay: 0.5s;
+        overflow: hidden;
+        transform: translateY(-100px);
+      }
+    }
+
+    &--2 {
+      display: none;
+      @include media("lg") {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        animation: moveDown 2s infinite linear;
+        animation-delay: 2s;
+        overflow: hidden;
+        transform: translateY(-100px);
+      }
+    }
+
+    &--3 {
+      display: none;
+      @include media("lg") {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        animation: moveDown 2s infinite linear;
+        animation-delay: 0.5s;
+        overflow: hidden;
+        transform: translateY(-100px);
+      }
+    }
+  }
+
+  &__shape-image {
+    display: none;
+    @include media("lg") {
+      position: absolute;
+      top: 160px;
+      left: 120px;
+      display: block;
+      animation: moveUpdown 2s linear infinite alternate;
+    }
+  }
+
+  &__round-image {
+    display: none;
+    @include media("lg") {
+      position: absolute;
+      bottom: 160px;
+      right: 120px;
+      display: block;
+      animation: rotation 10s infinite linear;
+    }
+  }
+
+  &__dotshape-image {
+    display: none;
+    @include media("lg") {
+      position: absolute;
+      top: 90px;
+      right: 120px;
+      display: block;
+      animation: moveToLeftRight 3s linear infinite alternate;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "../variables";
+@import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+.about-header {
+  background-color: $background-primary;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  @include media("lg") {
+    height: 800px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    text-align: center;
+    @include media("lg") {
+        height: 800px;
+    }
+
+    & h2 {
+      color: $color-white;
+      @include font(40px, 50px, 700);
+      @include media("lg") {
+        @include font(60px, 70px, 700);
+      }
+    }
+  }
+}
